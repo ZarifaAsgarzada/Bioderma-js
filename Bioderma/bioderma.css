@@ -1,0 +1,612 @@
+.header-start{
+    width: 1261px;
+height: 40px;
+padding: 8px 65px 8px 409px;
+gap: 0px;
+opacity: 0px;
+background: #6BACC8;
+display: flex;
+justify-content: space-around;
+}
+.header-start p{
+font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 20px;
+text-align: left;
+color: #FFFFFF;
+padding: 5px;
+}
+.header-start h2{
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 20px;
+text-align: left;
+color: #FFFFFF;
+padding: 5px 0;
+}
+ .naos-logo img{
+    width: 177px;
+height: 105px;
+gap: 0px;
+opacity: 0px;
+padding: 0 20px;
+ }
+ .logos{
+   padding: 0px 20px;
+ }
+ img[alt="Bioderma"] {
+    width: 107px;
+height: 21px;
+gap: 0px;
+opacity: 0px;
+}
+img[alt="Esthederm"] {
+    width: 75px;
+height: 27px;
+gap: 0px;
+opacity: 0px;
+}
+img[alt="Etatpur"]{
+    width: 90px;
+height: 19px;
+gap: 0px;
+opacity: 0px;
+}
+.header-container{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+ .search-container{
+    width: 277px;
+height: 36px;
+top: 16px;
+left: 783px;
+padding: 6px 12px 6px 12px;
+gap: 0px;
+border-radius: 4px 0px 0px 0px;
+border: 1px 0px 0px 0px;
+opacity: 0px;
+}
+#search-container search-input{
+    width: 42px;
+height: 24px;
+top: 6px;
+left: 12px;
+gap: 0px;
+opacity: 0px;
+}
+.search-container i{
+    width: 24px;
+height: 24px;
+padding: 3.6px;
+gap: 0px;
+opacity: 0px;
+}
+.icons{
+    display: flex;
+    justify-content: space-around;
+}
+.icons h1{
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 20px;
+text-align: left;
+color: #444A51;
+padding: 0 10px;
+}
+.icons i{
+    font-size: 24px;
+height: 14px;
+top: 22px;
+gap: 0px;
+opacity: 0px;
+   padding: 0 20px;
+}
+.nav{
+    width: 100%;
+height: 60px;
+padding: 0px 10px;
+gap: 0px;
+border: 0px 0px 1px 0px;
+opacity: 0px;
+border-bottom: 1px solid #ECEFF2;
+}
+.nav ul{
+    width: Hug (1,210px)px;
+height: Hug (60px)px;
+left: 44px;
+gap: 0px;
+opacity: 0px;
+display: flex;
+justify-content: space-around;
+}
+.nav li{
+ width: Hug (174px)px;
+height: Fixed (60px)px;
+padding: 12px 15px 12px 15px;
+gap: 10px;
+opacity: 0px;
+list-style: none;
+font-size: 14px;
+font-weight: 500;
+}
+.bioderma-container{
+    position: relative;
+}
+img[alt="prom"] {
+    width: 773px;
+height: 400px;
+top: 188px;
+left: 65px;
+gap: 0px;
+border-radius: 10px;
+opacity: 0px;
+}
+img[alt="sebium"] {
+    width: 106.29px;
+height: 253px;
+top: 85px;
+left: 511.15px;
+gap: 0px;
+opacity: 0px;
+position: absolute;
+}
+.bioderma-container h1{
+    font-family: Poppins;
+font-size: 28px;
+font-weight: 400;
+line-height: 40px;
+text-align: left;
+position: absolute;
+    top: 150px;
+    left: 60px;
+}
+img[alt="backg"] {
+    width: 377px;
+height: 400px;
+top: 188px;
+left: 858px;
+gap: 0px;
+border-radius: 10px;
+border: 1px 0px 0px 0px;
+opacity: 0px;
+border: 1px solid #DB3333
+}
+img[alt="sensib"] {
+    width: 127px;
+height: 289px;
+top: 55px;
+left: 208px;
+gap: 0px;
+opacity: 0px;
+position: absolute;
+}
+.boxes{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 0;
+}
+.bioderma-container1{
+    position: relative;
+    width: 426px;
+height: 416px;
+left: -24px;
+gap: 0px;
+opacity: 0px;
+}
+.bioderma-container1 h1{
+    font-family: Poppins;
+font-size: 18px;
+font-weight: 400;
+line-height: 27px;
+text-align: left;
+position: absolute;
+    top: 30px;
+    left: 20px;
+}
+.bioderma-container1 h2{
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 21px;
+text-align: left;
+position: absolute;
+    bottom: 130px;
+    left: 20px;
+}
+.bioderma-container1 h3{
+    font-family: Poppins;
+font-size: 18px;
+font-weight: 500;
+line-height: 21px;
+text-align: left;
+position: absolute;
+    bottom: 100px;
+    left: 20px;
+}
+.bioderma-container1 button{
+    width: Fixed (158px)px;
+height: Fixed (45px)px;
+padding: 10px 0px 0px 0px;
+gap: 10px;
+border-radius: 4px 0px 0px 0px;
+opacity: 0px;
+background: #DB3333;
+position: absolute;
+bottom: 60px;
+left: 20px;
+color: #fff;
+border: none;
+}
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 90px;
+            padding: 20px;
+            position: relative;
+        }
+        .product {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+        }
+        .product img {
+            width: 78px;
+            height: 178px;
+            top: 50px;
+            left: 100px;
+            gap: 20px;
+            opacity: 0px;
+        }
+        .product h3 {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+        .product p {
+            font-size: 14px;
+            margin: 5px 0;
+        }
+        .button {
+            background-color: #00aaff;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #0088cc;
+        }
+        .icone i {
+            font-size: 25px;
+            position: absolute;
+            cursor: pointer;
+            top: 78px;
+            right: 170px;
+        }
+        .cart-count {
+            position: absolute;
+            top: 67px;
+            right: 162px;
+            background-color: #6BABC7;
+            color: white;
+            border-radius: 50%;
+            padding: 5px;
+            font-size: 10px;
+        }
+        .cart-view {
+            display: none;
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            background-color: white;
+            border: 1px solid #ddd;
+            padding: 20px;
+            width: 300px;
+        }
+        .cart-view h3 {
+            margin: 0 0 10px;
+        }
+        .cart-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .remove-btn {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 5px;
+            cursor: pointer;
+        }
+        .total-price {
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .line h2{
+            font-family: Poppins;
+font-size: 20px;
+font-weight: 400;
+line-height: 40px;
+text-align: left;
+color: #009BC7;
+}
+.line button{
+font-family: Poppins;
+font-size: 18px;
+font-weight: 400;
+line-height: 27px;
+text-align: left;
+color: #444A51;
+cursor: pointer;
+border: 1px solid;
+background-color: #fff;
+}
+.line{
+display: flex;
+justify-content: space-around;
+}
+.cases{
+    width: 1200px;
+height: 525px;
+gap: 0px;
+opacity: 0px;
+padding: 50px 10px;
+display: flex;
+justify-content: space-around;
+flex-wrap: wrap;
+}
+.case-1 img{
+    width: 575px;
+    height: 400px;
+    top: 20px;
+    left: 650px;
+    gap: 0px;
+    border-radius: 10px 0px 0px 0px;
+    opacity: 0px;    
+    margin: 10px 0;
+}
+.case-2 img{
+    margin: 10px 0;
+    width: 575px;
+    height: 400px;
+    top: 20px;
+    left: 650px;
+    gap: 0px;
+    border-radius: 10px 0px 0px 0px;
+    opacity: 0px;
+    background: #FFFFFF;
+}
+.cases-btn button{
+    padding: 5px 0;
+   width: 20%;
+   background-color: #fff;
+  text-align: center;
+  border: 2px solid #009BC7;
+  margin: 0 40%;
+}
+.main h1{
+    height: 40px;
+    gap: 0px;
+    opacity: 0px;
+    font-family: Poppins;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 40px;
+    text-align: left;
+    color: #000;
+text-decoration: underline; 
+padding: 40px 50px;       
+}
+.cards{
+    display: flex;
+    justify-content: space-between;
+   width: Hug (377px)px;
+height: Hug (578px)px;
+top: 82px;
+left: 65px;
+gap: 20px;
+opacity: 0px;
+padding: 50px;
+text-align: center;
+}
+.cards img{
+    width: 380px;
+height: 400px;
+left: -1px;
+gap: 0px;
+opacity: 0px;
+}
+.cards h1{
+    font-family: Poppins;
+font-size: 21px;
+font-weight: 500;
+line-height: 21px;
+color: #000;
+padding: 30px ;
+}
+.cards p{
+    font-family: Poppins;
+font-size: 18px;
+font-weight: 400;
+line-height: 21px;
+text-align: center;
+color: #757575;
+}
+.cards button{
+    width: 40%;
+padding: 10px;
+gap: 10px;
+border-radius: 4px 0px 0px 0px;
+border: 1px 0px 0px 0px;
+opacity: 0px;
+border: 1px solid #040404;
+background-color: #fff;
+color: #000;
+}
+.carousel-inner {
+   width: 90%;
+    margin: auto;
+    overflow: hidden;
+    background-color: #fff;
+    position: relative;
+}
+.carousel-inner img {
+    width: 80%;
+    transition: transform 0.3s ease-in-out;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.carousel-inner h1{
+    font-family: Poppins;
+font-size: 24px;
+font-weight: 600;
+line-height: 36px;
+text-align: left;
+color: #fff;
+position: absolute;
+top: 20px;
+left: 30px;
+}
+.carousel-inner h2{
+    font-family: Poppins;
+font-size: 24px;
+font-weight: 500;
+line-height: 36px;
+text-align: left;
+color: #fff;
+position: absolute;
+top: 100px;
+left: 30px;
+}
+.carousel-inner span{
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 400;
+line-height: 21px;
+text-align: left;
+color: #fff;
+position: absolute;
+bottom: 120px;
+left: 30px;
+}
+.carousel-inner p{
+    font-family: Poppins;
+font-size: 18px;
+font-weight: 500;
+line-height: 21px;
+text-align: left;
+color: #000;
+position: absolute;
+bottom: 70px;
+left: 30px;
+}
+.parts{
+ margin-top: 100px;
+    width: 100%;
+    height: 140px;
+   background: #FACC02;
+   display: flex;
+   justify-content: space-around;
+  align-items: center;
+}
+.parts img{
+    width: 75px;
+height: 100px;
+gap: 0px;
+opacity: 0px;
+}
+.part-1{
+    display: flex;
+}
+.parts p{
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 600;
+line-height: 21px;
+text-align: center;
+color: #000;
+padding: 0 20px;
+}
+.footer {
+    padding: 50px;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+}
+.footer-section {
+    flex: 1;
+}
+.footer-section p{
+    width: 182px;
+height: 72px;
+top: 94px;
+left: 65px;
+gap: 0px;
+opacity: 0px;
+color: #282828;
+}
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+.footer-section img{
+    width: 167px;
+height: 99px;
+left: 65px;
+gap: 0px;
+opacity: 0px;
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+    font-family: Poppins;
+font-size: 16px;
+font-weight: 500;
+line-height: 24px;
+text-align: left;
+color: #444A51;
+}
+.footer-section ul li {
+    font-family: Poppins;
+font-size: 14px;
+font-weight: 400;
+line-height: 21px;
+text-align: left;
+color: #757575;
+}
+.footer-bottom {
+    text-align: center;
+    padding: 20px;
+}
+.footer-logos {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+.footer-logos img {
+    width: 107px;
+    height: 21.78px;
+    top: 33.26px;
+    left: 34px;
+    gap: 0px;
+    opacity: 0px;    
+}
+.footer-bottom p {
+    margin: 5px 0;
+}
+.footer-bottom a {
+    color: #9b9b9b;
+    text-decoration: none;
+}
+.footer-bottom i{
+    color: #757575;
+}

@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>Inputs types</title>
+    </head>
+    <body>
+        <!-- <form method="POST" action="">
+            <input name="user" type="text"placeholder="Istifadeci adi.." />
+            <input name="pass" type="password"placeholder="Istifadeci parolu.."/>
+            <input type="submit" value="Daxil ol"/>
+            <input type="reset" value="Sifirla"/>
+
+        </form> -->
+
+        <form>
+            <div>Ad Soyad:<input type="text"/></div>
+            <div>Tevellud:<input type="number" value ="2000" min="1990" max="2010"/></div>
+            <fieldset>
+                <legend> Cinsiyyet: </legend>
+               <label><input name="sex" type="radio" />Kisi</label> 
+               <label> <input name="sex" type="radio"/>Qadin</label> 
+
+            </fieldset>
+            <div>
+                Dogum Yeri:
+                <select>
+                    <option>Turkiye</option>      
+                    <option selected="selected">Azerbaycan</option>    
+                    <option>Rusiya</option>  
+                   </select>
+            </div>
+            <div>
+                Yasayis yeri:<input list="city"/>
+                <datalist id="city">
+                    <option>Baki</option>
+                <option>Gence</option>
+                <option>Samaxi</option>
+                <option>Sumqayit</option>
+                </datalist>
+            </div>
+            <div>
+                Bildiyi dil:
+               <label><input type="checkbox" />En</label> 
+               <label><input type="checkbox">Ru</label> 
+               <label><input type="checkbox">Az</label> 
+               <label><input type="checkbox">Tr</label> 
+               <label><input type="checkbox">Fr</label>
+            </div>
+            <div>Pis <input type="range"> Yaxsi</div>
+            <div>Ad gunu: <input type="date"/></div>
+            <div>Sekil: <input type="file"/></div>
+<div>
+    Etrafli:<br/>
+    <textarea cols="40 rows="10" placeholder="metn.."></textarea>
+</div>
+<div>
+    <input type="reset"value="temizle"/>
+</div>
+        </form>
+    </body>
+</html>

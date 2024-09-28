@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Us</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 100%;
+}
+.top-bar {
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+.top-bar .left-icons img {
+    margin-right: 15px;
+    width: 20px;
+    cursor: pointer;
+}
+.top-bar .right-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   width:300px;
+    z-index: 1000;
+}
+.nav-item {
+    position: relative;
+}
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+.dropdown a:hover {
+    background-color: #f5f5f5;
+}
+.nav-item:hover .dropdown {
+    display: block;
+}
+.navbar {
+    position: relative;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.logo img {
+    height: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+.nav-icons img {
+    margin-left: 20px;
+    width: 20px;
+}
+.order p{
+ height: 50px;
+ background-color: #f5f5f5;
+ text-align: center;
+ padding-top: 15px;
+ font-size: 13px;
+ text-decoration: underline;
+ cursor: pointer;
+ font-weight: bold;
+}
+.member{
+    display: flex;
+    justify-content: baseline;
+    margin: 40px;
+}
+.member h3{
+font-size: 30px;
+font-weight: normal;
+}
+.member ul{
+    font-size: 20px;
+  display: flex;
+    justify-content: space-around;
+  margin: 10px 50px;
+  gap: 40px;
+    list-style: none;
+    cursor: pointer;
+}
+.membership-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  background: url('https://img.freepik.com/free-photo/white-smoke-black-background-with-copy-space-writing-text_23-2148092348.jpg');
+  height: 350px;
+}
+h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;}
+p {
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+.sign-up-btn {
+    font-size: 15px;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.sign-up-btn:hover{
+    background-color: #ddd;
+}
+.member h3{
+    font-size: 2rem;
+   margin:40px 50px;
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.carousel {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.card {
+  min-width: 30%;
+  box-sizing: border-box;
+  margin: 0 1px 0 20px;
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  position: relative;
+}
+.card-content {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+}
+.card-content h4 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.card-content p {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+.card-btn {
+  padding: 10px 20px;
+  background-color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.left-btn {
+  left: 10px;
+}
+.right-btn {
+  right: 10px;
+}
+.card-btn:hover{
+    background-color: #ddd;
+}
+.car-cont {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            max-width: 1000px;
+            margin: auto;
+            height: 300px;
+        }
+        .car {
+            display: flex;
+            overflow: hidden;
+            width: 100%;
+        }
+        .card2 {
+            flex: 0 0 30%;
+            max-width: 30%; 
+            margin: 0 15px;
+            text-align: center;
+            transition: transform 0.5s ease;
+        }
+        .card2 h3{
+          font-size: 20px;
+        }
+        .card2 p{
+          font-size: 15px;
+        }
+        .icon {
+            font-size:60px;
+            color: orange;
+        }
+        #pBtn, #nBtn {
+            background-color: #fff;
+            border: none;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #pBtn {
+            left: 10px;
+        }
+        #nBtn {
+            right: 10px;
+        }
+        .line img{
+          overflow: hidden;
+          height: 26.3px;
+        }
+        .c-container {
+    align-items: center;
+   margin: 0 100px;
+    display: flex;
+    justify-content: space-between;
+height: 50vh;
+}
+.c {
+    background-color: white;
+    text-align: center;
+    width: 200px;
+}
+.logo {
+    width: 50px;
+    margin-bottom: 15px;
+}
+.c h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+.c p {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+.c a {
+font-size: 17px;
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+}
+.c a:hover {
+    color: #c9c9c9;
+}
+.photo img{
+  overflow: hidden;
+  height: 611px;
+}
+.accordion {
+  width: 90%;
+  margin: 50px;
+}
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  border-radius: 5px;
+}
+.accordion-header h3 {
+    font-size: 25px;
+    font-weight: normal;
+}
+.accordion-content {
+  display: none;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+}
+.accordion-content p {
+    font-size: 18px;
+}
+.accordion-content a {
+    text-decoration: underline;
+    color: #000;
+    font-weight: bold;
+}
+.icon {
+  font-size: 18px;
+  transition: transform 0.3s ease;
+}
+.accordion-header.active .icon {
+    transform: rotate(180deg);
+}
+.ship img{
+  overflow: hidden;
+  height: 250px;
+}
+.footer-container {
+display: flex;
+justify-content: space-between;
+margin: 0 auto;
+flex-wrap: wrap;
+padding: 70px;
+}
+.footer-column {
+width: 20%;
+}
+.footer-column h3 {
+font-size: 16px;
+margin-bottom: 20px;
+cursor: pointer;
+}
+.footer-column ul {
+list-style-type: none;
+padding: 0;
+margin-top: 30px;
+}
+.footer-column ul li {
+margin-bottom: 14px;
+font-size: 14px;
+color: #8e8c8c;
+font-weight: bold;
+cursor: pointer;
+}
+.footer-column ul li:hover {
+color: #1c1c1c;
+}
+.final{
+color: #8e8c8c;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+font-size: 13px;
+display: flex;
+justify-content: space-evenly;
+padding: 20px 0 40px 0;
+cursor: pointer;
+}
+.final p:hover{
+    color: #000;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <div class="left-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike Logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Jordan Logo">
+            </div>
+            <div class="right-links">
+                <a href="./FindAStore.html">Find a Store</a>
+                <a href="../Nike/Help.html">Help</a>
+                <a href="#">Join Us</a>
+                <a href="#">Sign In</a>
+            </div>
+        </div>
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike Logo">
+                </div>
+                <nav class="nav-links">
+                    <div class="nav-item">
+                        <a href="#">New</a>
+                        <div class="dropdown">
+                            <a href="#">New Arrivals</a>
+                            <a href="#">Best Sellers</a>
+                            <a href="#">New Drops</a>
+                            <a href="#">SNKRS Calendar</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Men</a>
+                        <div class="dropdown">
+                            <a href="#">Shoes</a>
+                            <a href="#">Clothing</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Women</a>
+                        <div class="dropdown">
+                            <a href="#">Shoes</a>
+                            <a href="#">Clothing</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Kids</a>
+                        <div class="dropdown">
+                            <a href="#">Shoes</a>
+                            <a href="#">Clothing</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Jordan</a>
+                        <div class="dropdown">
+                            <a href="#">Jordan Shoes</a>
+                            <a href="#">Jordan Clothing</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Sale</a>
+                        <div class="dropdown">
+                            <a href="#">Sale Shoes</a>
+                            <a href="#">Sale Clothing</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="nav-icons">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-cart-shopping"></i>
+                </div>
+            </div>
+        </header>
+        <div class="order">
+            <p>Members: Free Shipping on Orders $50+</p>
+        </div>
+      <div class="member">
+        <h3>Nike Membership</h3>
+        <ul>
+            <li>Sign Up</li>
+            <li>Member Product</li>
+            <li>Explore the Nike App</li>
+        </ul>
+      </div>
+      <div class="membership-section">
+        <h1>IT'S BETTER AS <br> A MEMBER</h1>
+        <p>Move, Shop, Customize and Celebrate with the best of Nike.</p>
+        <button class="sign-up-btn">Sign Up</button>
+      </div>  
+      <div class="member"> <h3>Member Benefits</h3>
+      </div>   
+      <div class="carousel-container">
+        <div class="carousel">
+          <div class="card" style="background-image: url('https://img.freepik.com/free-photo/white-smoke-black-background-with-copy-space-writing-text_23-2148092348.jpg');">
+            <div class="card-content">
+              <h4>Member Product</h4>
+              <p>Your Exclusive Access</p>
+              <button class="card-btn">Shop</button>
+            </div>
+          </div>
+          <div class="card" style="background-image: url('https://img.freepik.com/free-photo/white-smoke-black-background-with-copy-space-writing-text_23-2148092348.jpg');">
+            <div class="card-content">
+              <h4>Member Rewards</h4>
+              <p>How We Say Thank You</p>
+              <button class="card-btn">Celebrate</button>
+            </div>
+          </div>
+          <div class="card" style="background-image: url('https://img.freepik.com/free-photo/white-smoke-black-background-with-copy-space-writing-text_23-2148092348.jpg');">
+            <div class="card-content">
+              <h4>Sports & Wellness Apps</h4>
+              <p>Movement Where You're At</p>
+              <button class="card-btn">Move</button>
+            </div>
+          </div>
+          <div class="card" style="background-image: url('https://img.freepik.com/free-photo/white-smoke-black-background-with-copy-space-writing-text_23-2148092348.jpg');">
+            <div class="card-content">
+              <h4>Exclusive Content</h4>
+              <p>Stay Updated</p>
+              <button class="card-btn">Learn More</button>
+            </div>
+          </div>
+          <div class="card" style="background-image: url('https://img.freepik.com/free-photo/white-smoke-black-background-with-copy-space-writing-text_23-2148092348.jpg');">
+            <div class="card-content">
+              <h4>Special Discounts</h4>
+              <p>Save Big</p>
+              <button class="card-btn">Get Now</button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn left-btn">&#10094;</button>
+        <button class="carousel-btn right-btn">&#10095;</button>
+      </div>
+      <div class="member"> <h3>Members Also Get</h3>
+         </div>
+         <div class="car-cont">
+          <div class="car">
+            <div class="card2">
+              <div class="icon">🚚</div>
+              <h3>Free Shipping</h3>
+              <p>Members score free delivery on every $50+ order.</p>
+            </div>
+            <div class="card2">
+              <div class="icon">👗</div>
+              <h3>Wear Test</h3>
+              <p>Try it for 60 days—return if it’s not a fit.</p>
+            </div>
+            <div class="card2">
+              <div class="icon">📄</div>
+              <h3>Receiptless Returns</h3>
+              <p>Return or exchange receipt-free in-store or in the app.</p>
+            </div>
+            <div class="card2">
+              <div class="icon">🏬</div>
+              <h3>In-Store Pickup</h3>
+              <p>Pick up your order from the nearest store.</p>
+            </div>
+            <div class="card2">
+              <div class="icon">💳</div>
+              <h3>Flexible Payment</h3>
+              <p>Choose from various payment options.</p>
+            </div>
+          </div>
+          <button id="pBtn">❮</button>
+          <button id="nBtn">❯</button>
+        </div>
+        <div class="line">
+          <img src="https://static.nike.com/a/images/f_auto/dpr_1.1,cs_srgb/w_1261,c_limit/9946effb-0dfe-41c6-8b53-c4575250cd30/nike-membership.jpg" alt="line">
+        </div>
+        <div class="member">
+          <h3>Connect Through Membership</h3>
+        </div>
+        <div class="c-container">
+          <div class="c">
+              <img src="https://image.similarpng.com/very-thumbnail/2021/05/Colorful-circle-logo-design-illustration-on-transparent-background-PNG.png" alt="Nike App Logo" class="logo">
+              <h3>Nike App</h3>
+              <p>Keep up daily with the best of Nike, personalized for you.</p>
+              <a href="#">Explore</a>
+          </div>
+          <div class="c">
+              <img src="https://image.similarpng.com/very-thumbnail/2021/05/Colorful-circle-logo-design-illustration-on-transparent-background-PNG.png" alt="Nike Run Club Logo" class="logo">
+              <h3>Nike Run Club</h3>
+              <p>Run with us in the Nike Run Club App.</p>
+              <a href="#">Explore</a>
+          </div>
+          <div class="c">
+              <img src="https://image.similarpng.com/very-thumbnail/2021/05/Colorful-circle-logo-design-illustration-on-transparent-background-PNG.png" alt="Nike Training Club Logo" class="logo">
+              <h3>Nike Training Club</h3>
+              <p>Move with the best in the Nike Training Club App.</p>
+              <a href="#">Explore</a>
+          </div>
+          <div class="c">
+              <img src="https://image.similarpng.com/very-thumbnail/2021/05/Colorful-circle-logo-design-illustration-on-transparent-background-PNG.png" alt="SNKRS Logo" class="logo">
+              <h3>SNKRS</h3>
+              <p>Find the freshest drops in the SNKRS App.</p>
+              <a href="#">Explore</a>
+          </div>
+      </div>
+      <div class="photo">
+        <img src="../Nike/WhatsApp Image 2024-09-25 at 20.20.30.jpeg" alt="photo">
+      </div>
+      <div class="member"> <h3>Frequently Asked Questions</h3>
+      </div>
+      <div class="accordion">
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+          <h3>What is Nike Membership?</h3>
+          <span class="icon">▾</span>
+        </div>
+        <div class="accordion-content">
+          <p>Nike Membership is access to the very best of Nike through any of our apps, exclusive products, and Member-only experiences. Nike Members also enjoy free shipping on orders of $50 or more, 60-day Wear Test, and receipt-less returns. It’s free and easy to join. <a href="#">Sign Up</a>.</p>
+        </div>
+    
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            <h3>Am I a Nike Member?</h3>
+            <span class="icon">▾</span>
+        </div>
+        <div class="accordion-content">
+            <p>Maybe! If you’ve ever logged into a Nike app, then yes, yes you are. Welcome back! If not, let’s change that. <a href="#">Sign Up</a>.</p>
+        </div>
+    
+        <div class="accordion-header" onclick="toggleAccordion(this)">
+            <h3>Is Nike Membership free?</h3>
+            <span class="icon">▾</span>
+        </div>
+        <div class="accordion-content">
+            <p>100% yes. Members enjoy all the benefits of Nike Membership at no cost, because once you’re in, we got you. Zero money gets you access to all of it. <a href="#">Sign Up</a>.</p>
+        </div>
+      </div>
+      <div class="ship">
+   <img src="https://static.nike.com/a/images/f_auto/dpr_1.1,cs_srgb/w_1165,c_limit/9991d2bb-bf8f-4981-9c9d-38e3ae1e10be/nike-membership.jpg" alt="membership">
+      </div>
+      <hr>
+    </div>
+    <div class="footer-container">
+      <div class="footer-column">
+          <h3>Resources</h3>
+          <ul>
+              <li>Gift Cards</li>
+              <li>Find a Store</li>
+              <li>Membership</li>
+              <li>Nike x NBA </li>
+              <li>Nike Journal</li>
+              <li>Site Feedback</li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h3>Help</h3>
+          <ul>
+              <li>Get Help</li>
+              <li>Order Status</li>
+              <li>Shipping and Delivery</li>
+              <li>Returns</li>
+              <li>Order Cancellation</li>
+              <li>Payment Options</li>
+              <li>Gift Card Balance</li>
+              <li>Contact Us</li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h3>Company</h3>
+          <ul>
+              <li>About Nike</li>
+              <li>News</li>
+              <li>Careers</li>
+              <li>Investors</li>
+              <li>Purpose</li>
+              <li>Sustainability</li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h3>Promotions & Discounts</h3>
+          <ul>
+              <li>Student</li>
+              <li>Military</li>
+              <li>Teacher</li>
+              <li>First Responders</li>
+              <li>Birthday</li>
+          </ul>
+      </div>
+      <div class="footer-column">
+          <h3>United States      <i class="fa-solid fa-earth-americas"></i>  </h3>
+      </div>
+  </div>
+  <div class="final">
+     <p>© 2024 Nike, Inc. All Rights Reserved</p>
+<p>Guides</p>
+<p>Terms of Sale</p>
+<p>Terms of Use</p>
+<p>Nike Privarcy Policy</p>
+<p><i class="fa-solid fa-house"></i>    Your Privarcy Choices</p>
+<p>CA Supply Chains Act</p>
+  </div>
+    <script>
+const carousel = document.querySelector('.carousel');
+const leftBtn = document.querySelector('.left-btn');
+const rightBtn = document.querySelector('.right-btn');
+let currentIndex = 0;
+const totalCards = document.querySelectorAll('.card').length;
+const cardWidth = document.querySelector('.card').clientWidth + 15;
+rightBtn.addEventListener('click', () => {
+  if (currentIndex < totalCards - 1) {
+    currentIndex++;
+    carousel.style.transform = `translateX(-${cardWidth * currentIndex}px)`;
+  }
+});
+leftBtn.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    carousel.style.transform = `translateX(-${cardWidth * currentIndex}px)`;
+  }
+});
+const car = document.querySelector('.car');
+        let scrollPosition = 0;
+        
+        const maxScrollPosition = -(cardWidth * 2);
+        document.getElementById('nBtn').addEventListener('click', () => {
+            if (scrollPosition > maxScrollPosition) {
+                scrollPosition -= cardWidth;
+                car.style.transform = `translateX(${scrollPosition}px)`;
+            }
+        });
+        document.getElementById('pBtn').addEventListener('click', () => {
+            if (scrollPosition < 0) {
+                scrollPosition += cardWidth;
+                car.style.transform = `translateX(${scrollPosition}px)`;
+            }
+        });
+        function toggleAccordion(header) {
+  const content = header.nextElementSibling;
+  const allContents = document.querySelectorAll('.accordion-content');
+  const allHeaders = document.querySelectorAll('.accordion-header');
+  allContents.forEach((item) => {
+    if (item !== content) {
+      item.style.display = 'none';
+    }
+  });
+  allHeaders.forEach((item) => {
+    if (item !== header) {
+      item.classList.remove('active');
+    }
+  });
+  content.style.display = content.style.display === 'block' ? 'none' : 'block';
+  header.classList.toggle('active');
+}
+    </script>
+</body>
+</html>

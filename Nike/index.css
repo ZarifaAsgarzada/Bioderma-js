@@ -1,0 +1,322 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.container{
+    width: 100%;
+}
+.top-bar {
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+.top-bar .left-icons img {
+    margin-right: 15px;
+    width: 20px;
+    cursor: pointer;
+}
+.top-bar .right-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   width:300px;
+    z-index: 1000;
+}
+.nav-item {
+    position: relative;
+}
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+.dropdown a:hover {
+    background-color: #f5f5f5;
+}
+.nav-item:hover .dropdown {
+    display: block;
+}
+.navbar {
+    position: relative;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.logo img {
+    height: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+.nav-icons img {
+    margin-left: 20px;
+    width: 20px;
+}
+.nav-img {
+    display: flex;
+    justify-content: space-between;
+}
+.nav-img img {
+    width: 100%;
+    object-fit: cover;
+    height: 400px;
+}
+.content {
+    margin:20px 0 50px 0;
+    text-align: center;
+}
+.content h4 {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 5px;
+}
+.content h2 {
+    font-size: 42px;
+    font-weight: bold;
+    margin: 10px 0;
+    color: #000;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+}
+.content p {
+    font-size: 18px;
+    color: #000;
+}
+.content button {
+    display: inline-block;
+    margin: 15px 0;
+    padding: 7px 13px;
+    background-color: #000;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+}
+.content button:hover {
+    background-color: #333;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    position: relative;
+    width: 50%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+}
+.card-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+.card-content h4 {
+    font-size: 13px;
+    margin: 0;
+}
+.card-content h2 {
+    font-size: 20px;
+    margin: 5px 0;
+}
+.card-container button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 7px 13px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 20px;
+    border: none;
+    font-weight: bold;
+}
+.card-container button:hover {
+    background-color: #d1d0d0;
+}
+.card-left {
+    background-image: url('https://img.freepik.com/premium-photo/basketball-bright-green-textured-background-basketball-has-classic-orange-black-design_1187703-101386.jpg');
+}
+.card-right {
+    background-image: url('https://img.freepik.com/free-vector/dynamic-gradient-football-background_23-2149007789.jpg');
+}
+.card-left-bottom {
+    background-image: url('https://img.freepik.com/free-vector/dynamic-gradient-football-background_23-2149007789.jpg');
+}
+.card-right-bottom {
+    background-image: url('https://img.freepik.com/premium-photo/basketball-bright-green-textured-background-basketball-has-classic-orange-black-design_1187703-101386.jpg');
+}
+.card-left1 {
+    background-image: url('https://w1.pngwing.com/pngs/422/181/png-transparent-child-sports-coach-sports-association-sport-of-athletics-social-group-line-silhouette.png');
+}
+.card-right1 {
+    background-image: url('https://img.lovepik.com/free-png/20210926/lovepik-athlete-png-image_401504618_wh1200.png');
+}
+.shop h2{
+    font-size: 40px;
+  padding: 80px 0 0 30px;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.carousel {
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+width: 100%;
+overflow: hidden;
+}
+.carousel-track {
+display: flex;
+transition: transform 0.3s ease;
+}
+.carousel-item {
+flex:1;
+padding: 2px;
+text-align: center;
+position: relative;
+}
+.carousel-item img {
+width: 100%;
+}
+.carousel-item p {
+font-size: 1.2rem;
+margin-top: 10px;
+font-weight: bold;
+}
+.label {
+position: absolute;
+top: 10px;
+right: 10px;
+background-color: rgba(0, 0, 0, 0.7);
+color: white;
+padding: 5px 10px;
+border-radius: 10px;
+font-size: 0.9rem;
+}
+.carousel-btn button {
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+background-color: rgba(0, 0, 0, 0.5);
+color: white;
+border: none;
+padding: 10px;
+cursor: pointer;
+z-index: 10;
+}
+.prev {
+left: 10px;
+}
+.next {
+right: 10px;
+}
+.lists {
+padding: 50px 0 0 50px;
+width: 100%;
+display: flex;
+justify-content: space-between;
+margin: 0 auto;
+gap: 20px;
+}
+.column {
+width: 20%;
+padding: 50px 0 150px 0;
+}
+.column h3 {
+font-size: 23px;
+margin-bottom: 20px;
+}
+.column ul {
+list-style-type: none;
+padding: 0;
+}
+.column ul li {
+font-weight: 500;
+margin-bottom: 15px;
+font-size: 17px;
+transition: color 0.1s;
+color: #575757;
+cursor: pointer;
+}
+.column ul li:hover {
+color: #0e0a0b;
+}
+.footer-container {
+display: flex;
+justify-content: space-between;
+margin: 0 auto;
+flex-wrap: wrap;
+padding: 70px;
+}
+.footer-column {
+width: 20%;
+}
+.footer-column h3 {
+font-size: 16px;
+margin-bottom: 20px;
+cursor: pointer;
+}
+.footer-column ul {
+list-style-type: none;
+padding: 0;
+margin-top: 30px;
+}
+.footer-column ul li {
+margin-bottom: 14px;
+font-size: 14px;
+color: #8e8c8c;
+font-weight: bold;
+cursor: pointer;
+}
+.footer-column ul li:hover {
+color: #1c1c1c;
+}
+.final{
+color: #8e8c8c;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+font-size: 13px;
+display: flex;
+justify-content: space-evenly;
+padding: 20px 0 40px 0;
+cursor: pointer;
+}
+.final p:hover{
+    color: #000;
+}

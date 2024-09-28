@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tab Sekmeleri</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+}
+.tabs {
+    overflow: hidden;
+    display: flex;
+    gap: 15px;
+}
+.tablink {
+    background-color: #e8ecf1;
+    color: #222020;
+    padding: 7px 20px;
+    cursor: pointer;
+   border-radius: 20px;
+    transition: background-color 0.3s;
+    text-align: center;
+    border: none;
+}
+.tablink:hover {
+    background-color: #f45369;
+}
+.tabcontent {
+    display: none;
+    padding: 22px;
+    border-top: none;
+}
+#Birbank {
+    display: block;
+}
+.kalkulyator {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 400px;
+}
+.kalkulyator h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+.kalkulyator p {
+    margin-bottom: 20px;
+}
+.toggle-switch {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.toggle-switch label {
+    margin-right: 10px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: #e6007e;
+}
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+.range-container {
+    margin-bottom: 20px;
+}
+.range-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.range-container input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 3px;
+    background: #ddd;
+    outline: none;
+    border-radius: 5px;
+}
+.range-container input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #e6007e;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+.range-container input[type="range"]::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #e6007e;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+}
+#amountValue, #durationValue, #payment {
+    font-weight: bold;
+}
+.monthly-payment {
+    border: 1px solid #e8ecf1;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+}
+.monthly-payment p {
+    font-size: 18px;
+    color: #555;
+}
+.monthly-payment h1 {
+    font-size: 36px;
+    color: #e6007e;
+}
+    </style>
+</head>
+<body>
+<div class="tabs">
+    <button class="tablink" onclick="openTab(event, 'Birbank')">Birbank kartı</button>
+    <button class="tablink" onclick="openTab(event, 'Kredit')">Kredit</button>
+    <button class="tablink" onclick="openTab(event, 'Depozit')">Depozit</button>
+</div>
+<div id="Birbank" class="tabcontent">
+    <div class="kalkulyator">
+        <h2>Birbank kartı</h2>
+        <p>Müştərilərimizə asanlıqla əldə edə biləcəkləri taksit kartı təklif edirik.</p>
+        
+        <div class="toggle-switch">
+            <label for="toggle">Nağdlaşdırma</label>
+            <label class="switch">
+                <input type="checkbox" id="toggle">
+                <span class="slider"></span>
+            </label>
+            <label for="installment" style="margin-left: 20px;">Taksit</label>
+        </div>
+        <div class="range-container">
+            <label for="amount">Məbləğ</label>
+            <input type="range" id="amount" min="500" max="10000" value="1000" step="100">
+            <span id="amountValue">1000₼</span>
+        </div>
+        <div class="range-container">
+            <label for="duration">Müddət</label>
+            <input type="range" id="duration" min="3" max="24" value="6">
+            <span id="durationValue">6 ay</span>
+        </div>
+        <div class="monthly-payment">
+            <p>Aylıq ödəniş</p>
+            <h1 id="payment">182₼</h1>
+        </div>
+    </div>
+</div>
+<div id="Kredit" class="tabcontent">
+    <div class="kalkulyator">
+        <h2>Gündəlik tələbat krediti</h2>
+        <p>Siz müştərilərimizə asanlıqla əldə edə biləcəyiniz nağd kredit təklif edirik.</p>
+        <p>% dərəcəsi rəsmiləşmə zamanı müəyyən olunacaq</p>
+        <div class="range-container">
+            <label for="loanAmount">Məbləğ</label>
+            <input type="range" id="loanAmount" min="300" max="30000" value="10000">
+            <span id="loanAmountValue">10000₼</span>
+        </div>
+        <div class="range-container">
+            <label for="interestRate">Faiz</label>
+            <input type="range" id="interestRate" min="10.9" max="20" step="0.1" value="15">
+            <span id="interestRateValue">15%</span>
+        </div>
+        <div class="range-container">
+            <label for="loanDuration">Müddət</label>
+            <input type="range" id="loanDuration" min="3" max="59" value="3">
+            <span id="loanDurationValue">3 ay</span>
+        </div>
+        <div class="monthly-payment">
+            <p>Nağd pul krediti üçün aylıq ödəniş</p>
+            <h1 id="loanPayment">3417.01₼</h1>
+            <button id="orderButton" style="background-color: #e6007e; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Sifariş et</button>
+        </div>
+    </div>
+</div>
+<div id="Depozit" class="tabcontent">
+    <div class="kalkulyator">
+        <h2>Kapital depoziti kalkulyatoru</h2>
+        <p>Yüksək faizlər əldə etməklə yanaşı, siz müqavilənin bitmə tarixindən 1 ay (30 təqvim günü) qalanadək depozit məbləğini artıra bilərsiniz.</p>
+        <div class="switch-container">
+            <label for="monthlyToggle">Aylıq</label>
+            <input type="checkbox" id="monthlyToggle">
+            <label for="endTermToggle">Müddətin sonu</label>
+        </div>
+        <div class="range-container">
+            <label for="depositAmount">Məbləği daxil edin (min. 500 AZN/USD)</label>
+            <input type="range" id="depositAmount" min="500" max="100000" value="500">
+            <span id="depositAmountValue">500 AZN</span>
+        </div>
+        <div class="range-container">
+            <label for="depositDuration">Müddət</label>
+            <input type="range" id="depositDuration" min="3" max="36" value="6">
+            <span id="depositDurationValue">6 ay</span>
+        </div>
+        <div class="deposit-interest">
+            <div class="monthly-payment">
+            <h1 id="interestRate">10 % *</h1>
+            <p>Ümumi faiz gəliri</p>
+            <h2 id="totalInterest">250₼</h2>
+            <p class="note">Hesablamada faiz gəlirlərinə 10% vergi ilə bağlı şərtlər nəzərə alınmayıb.</p>
+            <button id="detailButton" style="background-color: #e6007e; color: white; padding: 10px 20px; border: none; border-radius: 5px;">Daha ətraflı</button>
+        </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tablink");
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].style.backgroundColor = "";
+    }
+    document.getElementById(tabName).style.display = "block";
+    evt.currentTarget.style.backgroundColor = "#ccc";
+}
+
+document.getElementById('amount').addEventListener('input', function () {
+    document.getElementById('amountValue').textContent = this.value + "₼";
+    updatePayment();
+});
+document.getElementById('duration').addEventListener('input', function () {
+    document.getElementById('durationValue').textContent = this.value + " ay";
+    updatePayment();
+});
+function updatePayment() {
+    var amount = document.getElementById('amount').value;
+    var duration = document.getElementById('duration').value;
+    var payment = Math.round(amount / duration);
+    document.getElementById('payment').textContent = payment + "₼";
+}
+document.getElementById('loanAmount').addEventListener('input', function () {
+    document.getElementById('loanAmountValue').textContent = this.value + "₼";
+    updateLoanPayment();
+});
+document.getElementById('interestRate').addEventListener('input', function () {
+    document.getElementById('interestRateValue').textContent = this.value + "%";
+    updateLoanPayment();
+});
+document.getElementById('loanDuration').addEventListener('input', function () {
+    document.getElementById('loanDurationValue').textContent = this.value + " ay";
+    updateLoanPayment();
+});
+function updateLoanPayment() {
+    var amount = document.getElementById('loanAmount').value;
+    var rate = document.getElementById('interestRate').value;
+    var duration = document.getElementById('loanDuration').value;
+    // ////////////////////////////////////
+    var monthlyRate = (rate / 100) / 12;
+    var payment = (amount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -duration));
+    document.getElementById('loanPayment').textContent = payment.toFixed(2) + "₼";
+}
+document.getElementById('depositAmount').addEventListener('input', function () {
+    document.getElementById('depositAmountValue').textContent = this.value + " AZN";
+    updateDepositInterest();
+});
+document.getElementById('depositDuration').addEventListener('input', function () {
+    document.getElementById('depositDurationValue').textContent = this.value + " ay";
+    updateDepositInterest();
+});
+function updateDepositInterest() {
+    var amount = document.getElementById('depositAmount').value;
+    var duration = document.getElementById('depositDuration').value;
+    var interestRate = 10;
+    var totalInterest = (amount * (interestRate / 100) * (duration / 12)).toFixed(2);
+    document.getElementById('interestRate').textContent = interestRate + " % *";
+    document.getElementById('totalInterest').textContent = totalInterest + "₼";
+}
+</script>
+</body>
+</html>

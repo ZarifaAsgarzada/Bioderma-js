@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Help</title>
+    <script src="https://kit.fontawesome.com/1e39886f7c.js" crossorigin="anonymous"></script>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+.container{
+    width: 100%;
+}
+.top-bar {
+    background-color: #f5f5f5;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+.top-bar .left-icons img {
+    margin-right: 15px;
+    width: 20px;
+    cursor: pointer;
+}
+.top-bar .right-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+}
+.dropdown {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+   width:300px;
+    z-index: 1000;
+}
+.nav-item {
+    position: relative;
+}
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+}
+.dropdown a:hover {
+    background-color: #f5f5f5;
+}
+.nav-item:hover .dropdown {
+    display: block;
+}
+.navbar {
+    position: relative;
+    background-color: white;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.logo img {
+    height: 22px;
+    margin: 10px;
+    cursor: pointer;
+}
+.nav-links {
+    display: flex;
+    align-items: center;
+}
+.nav-icons img {
+    margin-left: 20px;
+    width: 20px;
+}
+.help-section {
+    padding: 50px 20px;
+    text-align: center;
+}
+.search-box {
+    display: block;
+    margin: 0 auto 20px;
+}
+#help-input {
+    width: 300px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+#help-input:hover {
+    border-color: #000;
+}
+#help-input:focus {
+    width: 400px;
+    border-color: #000;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+}
+#search-btn {
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+#search-btn i {
+    font-size: 18px;
+}
+.personalized-help,
+.quick-assists {
+    padding: 20px 0 20px 100px;
+    text-align: left;
+    margin: 20px auto;
+}
+.personalized-help h2,
+.quick-assists h2 {
+    font-size: 24px;
+}
+.sign-in-btn {
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 17px;
+}
+.sign-in-btn:hover {
+    background-color: #333;
+}
+.personalized-help p {
+    margin-top: 10px;
+}
+.personalized-help a {
+    text-decoration: underline;
+    color: black;
+    font-weight: bold;
+}
+.personalized-help a:hover{
+    color: #ccc;
+}
+.quick-assists p {
+    font-size: 16px;
+}
+.personalized-help{
+    text-align: left;
+}
+.faq-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px;
+}
+.faq-section {
+    width: 30%;
+    margin-bottom: 20px;
+}
+h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+li {
+    margin-bottom: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: normal;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+.contact{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+.card {
+    width: 300px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    text-align: center;
+}
+.card i{
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.card h5{
+    font-size: 17px;
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+.lists {
+            padding: 50px 0 0 50px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .column {
+            width: 20%;
+            padding: 50px 0 150px 0;
+        }
+        .column h3 {
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+        .column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .column ul li {
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 17px;
+            transition: color 0.1s;
+            color: #575757;
+            cursor: pointer;
+        }
+        .column ul li:hover {
+            color: #0e0a0b;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 70px;
+        }
+        .footer-column {
+            width: 20%;
+        }
+        .footer-column h3 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .footer-column ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+        .footer-column ul li {
+            margin-bottom: 14px;
+            font-size: 14px;
+            color: #8e8c8c;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .footer-column ul li:hover {
+            color: #1c1c1c;
+        }
+        .final {
+            color: #8e8c8c;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px 0 40px 0;
+        }
+        .final p:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <div class="left-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike Logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Jordan Logo">
+            </div>
+            <div class="right-links">
+                <a href="./FindAStore.html">Find a Store</a>
+                <a href="#">Help</a>
+                <a href="#">Join Us</a>
+                <a href="#">Sign In</a>
+            </div>
+        </div>
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike Logo">
+                </div>
+                <nav class="nav-links">
+                    <div class="nav-item">
+                        <a href="#">New</a>
+                        <div class="dropdown">
+                            <a href="#">New Arrivals</a>
+                            <a href="#">Best Sellers</a>
+                            <a href="#">New Drops</a>
+                            <a href="#">SNKRS Calendar</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Men</a>
+                        <div class="dropdown">
+                            <a href="#">Shoes</a>
+                            <a href="#">Clothing</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Women</a>
+                        <div class="dropdown">
+                            <a href="#">Shoes</a>
+                            <a href="#">Clothing</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Kids</a>
+                        <div class="dropdown">
+                            <a href="#">Shoes</a>
+                            <a href="#">Clothing</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Jordan</a>
+                        <div class="dropdown">
+                            <a href="#">Jordan Shoes</a>
+                            <a href="#">Jordan Clothing</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Sale</a>
+                        <div class="dropdown">
+                            <a href="#">Sale Shoes</a>
+                            <a href="#">Sale Clothing</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="nav-icons">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-cart-shopping"></i>
+                </div>
+            </div>
+        </header>
+        <div class="help-section">
+            <h1>GET HELP</h1>
+            <div class="search-box">
+                <input type="text" id="help-input" placeholder="What can we help you with?">
+                <button id="search-btn"><i class="fa fa-search"></i></button>
+            </div>
+        </div>
+            <div class="personalized-help">
+                <h2>Get a personalized Help experience.</h2>
+                <button class="sign-in-btn">Sign In</button>
+                <p>Not a member, yet? <a href="#">Join Us</a></p>
+            </div>
+            <div class="quick-assists">
+                <h2>Quick Assists</h2>
+                <p>Answers to our most frequently asked questions are just one click away.</p>
+            </div>
+        <hr>
+
+        <div class="faq-container">
+            <div class="faq-section">
+                <h3>Returns</h3>
+                <ul>
+                    <li>What is Nike's return policy?</li>
+                    <li>How do I return my Nike order?</li>
+                    <li>Where is my refund?</li>
+                    <li><a href="#">View all</a></li>
+                </ul>
+            </div>
+            <div class="faq-section">
+                <h3>Shipping & Delivery</h3>
+                <ul>
+                    <li>What are Nike's shipping options?</li>
+                    <li>Can I buy online and pick up in a store?</li>
+                    <li>How do I get free shipping on Nike orders?</li>
+                    <li><a href="#">View all</a></li>
+                </ul>
+            </div>
+            <div class="faq-section">
+                <h3>Orders & Payment</h3>
+                <ul>
+                    <li>Where is my Nike order?</li>
+                    <li>Can I cancel or change my Nike order?</li>
+                    <li>What are Nike's payment options?</li>
+                    <li><a href="#">View all</a></li>
+                </ul>
+            </div>
+            <div class="faq-section">
+                <h3>Shopping</h3>
+                <ul>
+                    <li>How do I find the right size and fit?</li>
+                    <li>How can I get Nike's best deals?</li>
+                    <li>Does Nike offer product advice?</li>
+                    <li><a href="#">View all</a></li>
+                </ul>
+            </div>
+            <div class="faq-section">
+                <h3>Nike Membership & Apps</h3>
+                <ul>
+                    <li>What is Nike Membership?</li>
+                    <li>What is Nike SNKRS Pass?</li>
+                    <li>How can I join Nike SNKRS drawings?</li>
+                    <li><a href="#">View all</a></li>
+                </ul>
+            </div>
+            <div class="faq-section">
+                <h3>Company Info</h3>
+                <ul>
+                    <li>Do Nike shoes have a warranty?</li>
+                    <li>Can I recycle my Nike shoes?</li>
+                    <li>Does Nike offer grants or donations?</li>
+                    <li><a href="#">View all</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="quick-assists">
+            <h2>Contact Us</h2>
+        </div>
+        <hr>
+        <div class="contact">
+            <div class="card">
+                <i class="fa-solid fa-message"></i>
+                <h5>Chat with us</h5>
+                <p>Products & Orders: 4 am - 11 pm PT
+                    7 days a week</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-mobile"></i>
+                <h5>Call us</h5>
+                <p>1-800-806-6453
+                    Products & Orders: 4 am - 11 pm PT, 7 days a <br> week NRC, NTC & .SWOOSH: 8 am - 5 pm PT, <br> Mon - Fri Company Info & Inquiries: 7 am - 4 pm PT, Mon - Fri</p>
+            </div>
+            <div class="card">
+                <i class="fa-solid fa-location-dot"></i>
+                <h5>Find a Store</h5>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul>
+                    <li>Gift Cards</li>
+                    <li>Find a Store</li>
+                    <li>Membership</li>
+                    <li>Nike x NBA </li>
+                    <li>Nike Journal</li>
+                    <li>Site Feedback</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Help</h3>
+                <ul>
+                    <li>Get Help</li>
+                    <li>Order Status</li>
+                    <li>Shipping and Delivery</li>
+                    <li>Returns</li>
+                    <li>Order Cancellation</li>
+                    <li>Payment Options</li>
+                    <li>Gift Card Balance</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li>About Nike</li>
+                    <li>News</li>
+                    <li>Careers</li>
+                    <li>Investors</li>
+                    <li>Purpose</li>
+                    <li>Sustainability</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>Promotions & Discounts</h3>
+                <ul>
+                    <li>Student</li>
+                    <li>Military</li>
+                    <li>Teacher</li>
+                    <li>First Responders</li>
+                    <li>Birthday</li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h3>United States      <i class="fa-solid fa-earth-americas"></i>  </h3>
+            </div>
+        </div>
+        <div class="final">
+           <p>© 2024 Nike, Inc. All Rights Reserved</p>
+    <p>Guides</p>
+    <p>Terms of Sale</p>
+    <p>Terms of Use</p>
+    <p>Nike Privarcy Policy</p>
+    <p><i class="fa-solid fa-house"></i>    Your Privarcy Choices</p>
+    <p>CA Supply Chains Act</p>
+        </div>
+    </div>
+    </div>
+    <script>
+document.getElementById('search-btn').addEventListener('click', function() {
+    let query = document.getElementById('help-input').value;
+    if (query) {
+        alert(`Searching for: ${query}`);
+    } else {
+        alert('Please enter a search term.');
+    }
+});
+    </script>
+</body>
+</html>

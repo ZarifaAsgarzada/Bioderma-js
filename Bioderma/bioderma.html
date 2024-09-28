@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bioderma</title>
+    <script src="https://kit.fontawesome.com/1e39886f7c.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<link rel="stylesheet" href="./bioderma.css">
+</head>
+<body>
+    <div class="header-start">
+        <h2>Bioderma, Institut Esthederm ve Etat Pur rəsmi satış saytıdır.</h2>
+        <p> <i class="fa-solid fa-phone"></i>  +994 12 123 4567</p>
+    </div>
+<header>
+    <div class="header-container">
+        <div class="naos-logo">
+            <img src="./images/naos.png" alt="Naos">
+        </div>
+           <div class="logos">
+            <img src="./images/bioderma.png" alt="Bioderma">
+            <img src="./images/esthederm.png" alt="Esthederm">
+            <img src="./images/etatpur.png" alt="Etatpur">
+            </div>
+            <div class="search-container">
+                <input type="text" placeholder="Axtar" id="search-input">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </div>
+              <div class="icons">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-solid fa-bag-shopping"></i>
+                <h1>AZ</h1>
+                <h1>EN</h1>
+              </div>
+    </div>
+</header>  
+<hr>
+<div class="nav">
+    <ul>
+        <li>Brendlər və Məhsullar</li>
+        <li>Üz qulluğu</li>
+        <li>Bədən qulluğu</li>
+        <li>Günəş qoruyucuları</li>
+        <li>Gözəl yaş alma</li>
+        <li>Qulluq setləri</li>
+        <li>Aksiyalar və Kampaniyalar</li>
+        <li>Haqqımızda</li>
+        <li>Faydalı</li>
+    </ul>
+</div>
+<div class="boxes">
+<div class="bioderma-container">
+    <img src="./images/prom.png" alt="prom">
+    <img src="./images/sebium.png" alt="sebium">
+    <h1>Ləkəyə qarşı <br> <b>parlaqladıcı</b>  qayğı: <br> Pigmentbio </h1>
+</div>
+<div class="bioderma-container1">
+    <img src="./images/backg.png" alt="backg">
+    <img src="./images/sensib.png" alt="sensib">
+   <h1>Ləkəyə qarşı <br>
+    <b>Parlaqladıcı </b> qayğı:</h1>
+   <h2>Make-up removal</h2>
+   <h3>Sensibio Micellar water, 1 l</h3>
+   <button>30% Endirim</button>
+</div>
+</div>
+
+<div class="line">
+    <h2>Endirimli Məhsullar</h2>
+    <button id="toggleButton">Hamısına bax</button>
+</div>
+
+<div class="icone">
+    <i class="fa-solid fa-bag-shopping cart-icon" onclick="toggleCartView()"></i>
+    <span class="cart-count" id="cart-count">0</span>
+</div>
+<div class="container" id="productContainer">
+    <div class="product">
+        <img src="images/sensib.png" alt="Bioderma Sensibio Micellar Water">
+        <h3>Bioderma Sensibio Micellar Water</h3>
+        <p>1L</p>
+        <p>14.00 AZN</p>
+        <button class="button" onclick="addToCart('Bioderma Sensibio Micellar Water', 14.00)">Səbətə at</button>
+    </div>
+    <div class="product">
+        <img src="images/sebium.png" alt="Bioderma Hydrabio H2O">
+        <h3>Bioderma Hydrabio H2O</h3>
+        <p>1L</p>
+        <p>14.00 AZN</p>
+        <button class="button" onclick="addToCart('Bioderma Hydrabio H2O', 14.00)">Səbətə at</button>
+    </div>
+    <div class="product">
+        <img src="images/cream.png" alt="Bioderma Photoderm Max 50+">
+        <h3>Bioderma Photoderm Max 50+</h3>
+        <p>1L</p>
+        <p>14.00 AZN</p>
+        <button class="button" onclick="addToCart('Bioderma Photoderm Max 50+', 14.00)">Səbətə at</button>
+    </div>
+    <div class="product">
+        <img src="images/shower.png" alt="Bioderma ABCDerm H2O">
+        <h3>Bioderma ABCDerm H2O</h3>
+        <p>1L</p>
+        <p>14.00 AZN</p>
+        <button class="button" onclick="addToCart('Bioderma ABCDerm H2O', 14.00)">Səbətə at</button>
+    </div>
+</div>
+<div class="cart-view" id="cart-view">
+    <h3>Səbət</h3>
+    <ul id="cart-items"></ul>
+    <p class="total-price">Ümumi qiymət: <span id="total-price">0.00</span> AZN</p>
+    <button onclick="clearCart()">Səbəti təmizlə</button>
+</div>
+
+<div class="cases">
+    <div class="case-1">
+       <img src="./images/video.png" alt="video">
+    </div>
+    <div class="case-2">
+        <img src="./images/labor.png" alt="labor">
+    </div>
+</div>
+<div class="cases-btn">
+    <button  id="myButton">Daha çox</button>
+</div>
+<div class="main"> <h1>Dəri qulluğu rutini</h1></div>
+
+<div class="cards">
+    <div class="card-1">
+        <img src="./images/card1.png" alt="card1">
+        <h1>1.Addım: Təmizlə</h1>
+        <p>Dəri tipinə uyğun təmizləyicilər</p>
+        <button>Kəşf et</button>
+    </div>
+    <div class="card-2">
+        <img src="./images/card2.png" alt="card2">
+        <h1>2. Addım: Müalicə et və qulluq 
+            (nəmləndir) et</h1>
+        <p>Dəri tipinə uyğun qulluq məhsulları</p>
+        <button>Kəşf et</button>
+    </div>
+     <div class="card-3">
+        <img src="./images/card3.png" alt="card3">
+        <h1>3. Addım: Günəşdən qoru        </h1>
+        <p>Dəri tipinə uyğun Günəş qoruyucuları</p>
+        <button>Kəşf et</button>
+    </div>
+</div>
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./images/mega.png" class="d-block w-100" alt="mega">
+        <h1>MEGA DISCOUNT OF <br>
+            THE MONTH</h1>
+            <h2>UP TO 30% OFF</h2>
+            <span>Make-up removal</span>
+            <p>Sensibio Micellar water, 1 l</p>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/mega.png" class="d-block w-100" alt="mega">
+        <h1>MEGA DISCOUNT OF <br>
+            THE MONTH</h1>
+            <h2>UP TO 30% OFF</h2>
+            <span>Make-up removal</span>
+            <p>Sensibio Micellar water, 1 l</p>
+      </div>
+      <div class="carousel-item">
+        <img src="./images/mega.png" class="d-block w-100" alt="mega">
+        <h1>MEGA DISCOUNT OF <br>
+            THE MONTH</h1>
+            <h2>UP TO 30% OFF</h2>
+            <span>Make-up removal</span>
+            <p>Sensibio Micellar water, 1 l</p>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+     
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="parts">
+    <div class="part-1">
+        <img src="./images/camera.png" alt="camera">
+        <p>Səhiyyə mütəxəssisləri ilə <br> 40 illik iş təcrübəsi</p>
+    </div>
+    <div class="part-1">
+        <img src="./images/water.png" alt="water">
+        <p>Dəriyə dərin hörmət</p>
+    </div> 
+     <div class="part-1"> 
+        <img src="./images/cihaz.png" alt="cihaz">
+        <p>Effektivlik və təhlükəsizlik tibbi <br> nəzarət altında sınaqdan keçirilmişdir</p>
+    </div>
+    <div class="part-1"> 
+        <img src="./images/era.png" alt="era">
+        <p>Səhiyyə mütəxəssisləri ilə <br>40 illik iş təcrübəsi</p>
+    </div> 
+  </div>
+  <footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section">
+            <img src="./images/naos.png" alt="NAOS" style="width: 100px; margin-bottom: 10px;">
+            <p>NAOS dünyanın ilk müstəqil elmi-tədqiqat strukturlarından biridir: NAOS eləcə də bioloji tənzimləmə ilə dərini qoruyur.</p>
+        </div>
+        <div class="footer-section">
+            <h4>Kategoriyalar</h4>
+            <ul>
+                <li>Brendlər və Məhsullar</li>
+                <li>Qulluq setləri</li>
+                <li>Üz qulluğu</li>
+                <li>Bədən qulluğu</li>
+                <li>Günəş qoruyucuları</li>
+                <li>Göz ətrafı</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Şirkət</h4>
+            <ul>
+                <li>Haqqımızda</li>
+                <li>Faydalı</li>
+                <li>Aksiyalar və Kampaniyalar</li>
+            </ul>
+        </div>
+        <div class="footer-section">
+            <h4>Kömək</h4>
+            <ul>
+                <li>FAQ</li>
+                <li>Ödəniş və çatdırılma</li>
+                <li>Zəmanət şərtləri</li>
+                <li>Mağaza ünvanları</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="footer-logos">
+            <img src="./images/bioderma.png" alt="Bioderma">
+            <img src="./images/esthederm.png" alt="Institut Esthederm">
+            <img src="./images/etatpur.png" alt="Etat Pur">
+        </div>
+        <p>Bütün hüquqlar qorunur. © 2022 BIODERMA</p>
+        <p>Bu bir <a href="#">Marcom</a> məhsuludur.</p>
+        <i class="fa-brands fa-whatsapp"></i>
+        <i class="fa-brands fa-youtube"></i>
+    </div>
+</footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+ <script src="./bioderma.js"></script>
+</body>
+</html>

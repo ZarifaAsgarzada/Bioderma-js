@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Təhlükəsizlik qaydaları</title>
+    <link rel="icon" href="https://jetchatbot.kapitalbank.az/files/static-images/content/2023/8/1/63c6723da04cbed2c81ee1ae/ef819380-a4b3-4be8-b296-40d5d55b0c88.png" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/1e39886f7c.js" crossorigin="anonymous"></script>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+}
+.start{
+    width: 100%;
+    background-color: #fff;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #fff;
+    margin:0 20px;
+}
+.navbar img {
+    width: 18%;
+    cursor: pointer;;
+}
+.navbar i{
+    color: #f45369;
+}
+.navbar ul {
+    display: flex;
+justify-content: flex-end;
+align-items: center;
+gap: 15px; 
+padding: 5px 10px;
+font-size: 0.7em;
+list-style: none;
+cursor: pointer;
+}
+.navbar ul li {
+    cursor: pointer;
+    position: relative;
+}
+.navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #fff;
+z-index: 1;
+left: 0; 
+width: 90vw; 
+padding: 10px;
+box-sizing: border-box; 
+grid-template-columns: repeat(2, 1fr); 
+}
+.dropdown-content a {
+color: black;
+padding: 2px 6px;
+text-decoration: none;
+display: block;
+}
+.dropdown-content a:hover {
+color: red;
+}
+.dropdown:hover .dropdown-content {
+display: grid; 
+}
+.lists {
+    display: flex;
+    justify-content: space-around;
+    background-color: #E8ECF1;
+}
+.lists ul {
+    display: flex;
+   align-items: center;
+    list-style: none;
+}
+.lists ul li {
+    position: relative;
+}
+.lists ul li a {
+    text-decoration: none;
+  color: #333;
+  padding: 10px;
+  font-size: 0.8em;
+}
+.lists button{
+    height: 35px;
+margin: 25px;
+padding: 5px 25px;
+border-radius: 10px;
+border: none;
+background-color: #f45369;
+color: #fff;
+font-size: 1.0em;
+transition: 0.3s;
+}
+.lists button:hover{
+    cursor: pointer;
+    background-color:#ef3e42 ;
+}
+.security{
+    display: flex;
+    justify-content: space-between;
+    margin: 50px;
+}
+.sec img{
+    width: 50%;
+    margin: 20%;
+}
+.rules h1{
+    font-size: 2.5em;
+}
+.rules h3{
+    font-weight: 100;
+    color: #404040;
+   margin-top: 20px;
+}
+.rules li{
+    font-size: 0.7em;
+    margin-top: 30px;
+}
+.laws li{
+    font-size: 0.8em;
+    margin: 50px;
+}
+.lisenziya p{
+    font-size: 0.7em;
+    margin: 50px;
+    cursor: pointer;
+}
+.lisenziya p:hover{
+    color: #f45369;
+}
+footer {
+    background-color: #2E2E2E;
+    color: #FFF;
+    padding: 20px;
+    overflow: hidden;
+    margin: 50px 0 0 0;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+.footer-column {
+    width: 20%;
+}
+.footer-column h3 {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-column ul li {
+    margin-bottom: 15px;
+    font-size: 12px;
+    transition: color 0.3s;
+}
+.footer-column ul li:hover {
+    color: #f45369;
+}
+.footer-column .qr-code {
+    max-width: 150px;
+    margin-top: 10px;
+}
+.app i{
+    font-size: 20px;
+}
+.app{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 30px; 
+    align-items: center;
+    cursor: pointer;
+}
+.app a{
+ border: 1px solid #f45369;
+border-radius: 10px;
+padding: 10px;
+font-weight: bold;
+ }
+.app-links a {
+    display: block;
+    color: #FFF;
+    margin-top: 10px;
+    text-decoration: none;
+}
+.app-links a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    .footer-column {
+        width: 45%;
+    }}
+@media (max-width: 480px) {
+    .footer-column {
+        width: 100%;
+    }}
+    .horizontal-line {
+    border: 0;
+    border-top: 1px solid #6d6d6d;
+    margin: 20px 0;
+    width: 100%;
+    padding: 10px 20px;
+}
+h5{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+font-size: 13px;
+display: flex;
+flex-wrap: wrap;
+}
+.gov{
+    display: grid;
+    grid-auto-flow: column;
+    gap: 10px; 
+    align-items: center;
+    cursor: pointer;
+}
+.gov img{
+    width: 70%;
+}
+    </style>
+</head>
+<body>
+     <div class="start">
+    <div class="navbar">
+        <img src="https://www.kapitalbank.az/assets/static/img/content/elements/svg/KB-150il-Logo.svg" alt="Kapital Bank logo">
+        <ul>
+            <li><a href="#"> <b>Fiziki şəxslər üçün</b></a></li>
+            <li><a href="https://birbank.business/">Biznes üçün</a></li>
+            <li><a href="https://www.kapitalbank.az/locations"><i class="fa-solid fa-location-dot"></i> Xidmət Şəbəkəsi</a></li>
+            <li><a href="#">EN</a></li>
+            <li><a href="#">RU</a></li>
+            <li><a href="#"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+        </ul>
+    </div>
+    <div class="lists">
+        <ul>
+            <li class="dropdown">
+                <a href="#">KARTLAR</a>
+                <div class="dropdown-content">
+                    <a href="#">Təhlükəsizlik qaydaları</a>
+                    <a href="#">Premium kartlar</a>
+                    <a href="#">Hədiyyə kartları</a>
+                    <a href="#">Kartlar üzrə xidmətlər</a>
+                    <a href="#">Birbank kartları</a>
+                    <a href="#">3D Secure</a>
+                    <a href="#">Kart sifarişi</a>
+                    <a href="#">Birbank kartının eyniləşdirilməsi</a>
+                </div>
+            </li>
+            <li><a href="#">KREDİTLƏR</a></li>
+            <li><a href="#">İPOTEKALAR</a></li>
+            <li><a href="#">DEPOZİTLƏR</a></li>
+            <li><a href="#">İSTİQRAZ</a></li>
+            <li><a href="#">PUL KÖÇÜRMƏLƏRİ</a></li>
+            <li><a href="#">ONLAYN XİDMƏTLƏR</a></li>
+            <li><a href="#">KAMPANİYALAR</a></li>
+            <li><a href="#">FƏRDİ BANKÇILIQ</a></li>
+            <button>Birbank</button>
+        </ul>
+    </div>
+    <div class="security">
+        <div class="rules">
+    <h1>Təhlükəsizlik qaydaları</h1>
+    <h3>Kapital Bank kartlar üzrə təhlükəsizlik qaydaları <br> ilə tanış olun ki, xoşagəlməz hallarla <br> qarşılaşmayasınız.</h3>
+<h6>Kapital Bank ASC-nin plastik kart müştəriləri aşağıda qeyd edilən ölkələrdə <br> əməliyyat aparmaq istədikdə eyniləşdirmə sənədini (şəxsiyyət vəsiqəsi, passport, müvəqqəti və ya daimi yaşayış icazəsi sənədi) Banka təqdim etmələri zəruridir. Əks təqdirdə həmin ölkələrdə əməliyyat apara bilməyəcəklər.</h6>
+<li>Ermənistan Respublikası;</li>
+<li>Kot–d’İvuar Respublikası;</li>
+<li>Beliz;</li>
+<li>Əfqanıstan İslam Respublikası;</li>
+<li>İran İslam Respublikası;</li>
+<li>İraq Respublikası;</li>
+<li>Konqo Demokratik Respublikası;</li>
+<li>Koreya Xalq Demokratik Respublikası;</li>
+<li>Qayana Kooperativ Respublikası;</li>
+</div>
+<div class="sec">
+    <img src="https://www.kapitalbank.az/images/cards/lock1.png" alt="lock">
+</div>
+</div>
+<div class="laws">
+    <li>Ödəniş kartını təhvil aldıqdan dərhal sonra, kartın arxa tərəfində yerləşən imza panelini imzalayın;</li>
+    <li>PIN-kodunuzu heç vaxt kartın üzərində və ya arxasında qeyd etməyin;</li>
+    <li>Kartla PIN kodu ayrı-ayrı yerlərdə saxlayın. Bu onların birlikdə itirilməsinin və ya oğurlanmasının, kart hesabınızda olan pul vəsaitinin ikinci şəxs tərəfindən istifadəsinin qarşısını ala bilər;</li>
+    <li>Heç bir halda ödəniş kartını digər şəxslərə verməyin;</li>
+    <li>Bankomatdan istifadə edərkən kartı bankomata daxil edilən hissəsinə diqqət yetirin. Orada heç bir əlavə qurğu və ya alət olmamalıdır;</li>
+    <li>Daxil etdiyiniz PIN-kodu ikinci tərəfin görməsinə yol verməyin. Sizin əvəzinizə əməliyyat aparmağı kənar şəxslərə həvalə etməyin;</li>
+    <li>Alınan malın və ya göstərilən xidmətin dəyərinin ödənişini POS-terminal vasitəsilə yerinə yetirən zaman, çekin surətini ən azı məbləğin kart hesabından düzgün silindiyinə əmin olana qədər özünüzdə saxlayın;</li>
+    <li>POS-terminallardan başqa kənar cihazlar vasitəsi ilə kartın oxunmasına icazə verməyin;</li>
+    <li>Kartla internetdə əməliyyat apararkən adınıza olan əmək haqqı, pensiya və iri məbləğlər saxladığınız kartlardan istifadəsi tövsiyyə olunmur. Bu məqsədlər üçün Kapital Bankın Virtual Card-ı daha səmərəli və təhlükəsizdir.</li>
+    <li>Kart itirildikdə və ya oğurlandıqda, dərhal Bankın Müştəri xidmətinə (ölkə daxilindən 196, xaricdən isə +99412 5984460) zəng edin və kartınızı bloklaşdırın.</li>
+    <li>ABŞ, Kanada, Latın Amerika, Asiya ölkələrinin əksəriyyətində çip texnologiyasının tətbiq olunmadığı üçün bu ölkələrdə aparılan əməliyyatlar yüksək riskli hesab edilir. Risklərin azaldılması məqsədilə bu ölkələrdə iri məbləğlər saxladığınız ödəniş kartlardan mümkün qədər az istifadə edilməsi tövsiyyə olunur.</li>
+    <li>Bank tərəfindən emissiya edilən kartlar vasitəsilə aparılan əməliyyatlar zamanı baş verə biləcək əməliyyat riskinin azaldılması və kart itirildikdə potensial itkilərin azaldılması məqsədilə İnternet üzərindən aparılan əməliyyatlara, həmçinin yüksək riskli və risk dərəcəsi nisbətən aşağı olan ölkələrdə ATM-lərdən nağd vəsaitin çıxarılması və POS-terminal vasitəsilə ödənişlərin aparılmasına dair plastik kart növləri üzrə gündəlik istifadə limitləri təyin edilmişdir. Odur ki, hər hansı ölkəyə səyahət etdikdə, kart sahibi kartda gündəlik limitlərin fərdi şəkildə tətbiq olunması prosesi üzrə 196 Müştəri xidmətinə, xidmət olunduğu Bankın yerli struktur bölməsinə müraciət etməklə müvafiq konsultasiya ala və yaxud “İnternet/Mobile Banking” xidməti vasitəsilə şəxsi tələblərinə uyğun məhdudiyyətlərin sistemə daxil olunmasını təmin edə bilər.</li>
+</div>
+<div class="lisenziya">
+<p> Mobil bank lisenziyası müqaviləsi</p>
+</div>
+</div>
+<footer>
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Kapital Bank</h3>
+            <ul>
+                <li>Bank haqqında</li>
+                <li>İnsan resursları</li>
+                <li>Xidmət şəbəkəsi</li>
+                <li>Birbank</li>
+                <li>Xəbərlər</li>
+                <li>Təklif və şikayətlər</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Məhsullar</h3>
+            <ul>
+                <li>Kartlar</li>
+                <li>Kreditlər</li>
+                <li>Depozitlər</li>
+                <li>Siğorta</li>
+                <li>Pul köçürmələri</li>
+                <li>Fərdi bankçılıq</li>
+                <li>Onlayn xidmətlər</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Çevik keçidlər</h3>
+            <ul>
+                <li>Birbank kartı sifariş et</li>
+                <li>Kredit sifariş et</li>
+                <li>Debet kart sifariş et</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Digər</h3>
+            <ul>
+                <li>Onlayn növbə</li>
+                <li>Tariflər və məlumatlar</li>
+                <li>Infokiosk</li>
+                <li>Bloqlar</li>
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Mobil Tətbiq</h3>
+            <p>Birbank tətbiqini yükləmək üçün QR-kodu oxudun.</p>
+            <img src="https://www.kapitalbank.az/assets/static/img/qr-code.svg" alt="QR Kod" class="qr-code">
+            <div class="app-links">
+                <a href="https://play.google.com/store/apps/details?id=az.kapitalbank.mbanking">Google Play</a>
+                <a href="https://apps.apple.com/us/app/birbank/id1293207342">App Store</a>
+                <a href="https://appgallery.huawei.com/#/app/C102156391">App Gallery</a>
+            </div>
+        </div>
+        <div class="app">
+            <a><i class="fa-solid fa-phone"></i>   196</a>
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-linkedin"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-telegram"></i>
+        </div>
+        <hr class="horizontal-line">
+        <div class="final">
+    <h5>  © 2024 «Kapital Bank» ASC. Bütün hüquqlar qorunur.</h5> 
+    <h5>  "Kapital Bank” ASC (Bakı şəh., Nəsimi r-nu, Füzuli küç. 71) 05 noyabr 2018-ci il tarixli 244 nömrəli <br> Bank Lisenziyası əsasında fəaliyyət göstərir.</h5>
+</div>
+<div class="gov">
+    <img src="https://www.kapitalbank.az/assets/static/img/content/elements/png/93817465.png">
+    <img src="https://www.kapitalbank.az/assets/static/img/content/elements/png/aesf-logo.png">
+    <img src="https://www.kapitalbank.az/assets/static/img/content/elements/png/info.png">
+    <img src="https://www.kapitalbank.az/assets/static/img/content/elements/png/msp.png">
+</div>
+</footer>
+</body>
+</html>

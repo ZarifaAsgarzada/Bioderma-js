@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Display</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .container {
+      display: flex;
+    }
+    .filters {
+      width: 20%;
+      padding: 20px;
+      background-color: #f9f9f9;
+      border-right: 1px solid #ccc;
+    }
+    .filter-section {
+      margin-bottom: 20px;
+    }
+    .filter-section h4 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .filters input[type="checkbox"] {
+      margin-right: 5px;
+    }
+    .filters label {
+      margin-right: 10px;
+    }
+    .products-grid {
+      width: 80%;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 20px;
+      padding: 20px;
+    }
+    .product-item {
+      padding: 10px;
+      text-align: center;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fff;
+    }
+    .product-item img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+    .product-item p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    .discount-price {
+      color: red;
+      font-weight: bold;
+    }
+    .price-range {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="filters">
+      <h3>Filters</h3>
+
+      <div class="filter-section" data-filter-group="discount">
+        <h4>Discount</h4>
+        <input type="checkbox" id="extra-off" value="Extra 20% Off"> 
+        <label for="extra-off">Extra 20% Off</label><br>
+        <input type="checkbox" id="sale" value="Sale"> 
+        <label for="sale">Sale</label>
+      </div>
+
+      <div class="filter-section" data-filter-group="gender">
+        <h4>Gender</h4>
+        <input type="checkbox" id="men" value="Men"> <label for="men">Men</label><br>
+        <input type="checkbox" id="women" value="Women"> <label for="women">Women</label><br>
+        <input type="checkbox" id="unisex" value="Unisex"> <label for="unisex">Unisex</label>
+      </div>
+
+      <div class="filter-section" data-filter-group="kids">
+        <h4>Kids</h4>
+        <input type="checkbox" id="kids-boys" value="Boys"> <label for="kids-boys">Boys</label><br>
+        <input type="checkbox" id="kids-girls" value="Girls"> <label for="kids-girls">Girls</label>
+      </div>
+
+      <div class="filter-section" data-filter-group="color">
+        <h4>Color</h4>
+        <input type="checkbox" id="color-black" value="Black"> <label for="color-black">Black</label><br>
+        <input type="checkbox" id="color-white" value="White"> <label for="color-white">White</label><br>
+        <input type="checkbox" id="color-blue" value="Blue"> <label for="color-blue">Blue</label>
+      </div>
+
+      <div class="filter-section" data-filter-group="price">
+        <h4>Shop by Price</h4>
+        <div class="price-range">
+          <span>$0</span>
+          <input type="range" id="price" min="0" max="200" step="10">
+          <span id="price-value">$100</span>
+        </div>
+      </div>
+
+      <div class="filter-section" data-filter-group="brand">
+        <h4>Brand</h4>
+        <input type="checkbox" id="brand-nike" value="Nike"> <label for="brand-nike">Nike</label><br>
+        <input type="checkbox" id="brand-adidas" value="Adidas"> <label for="brand-adidas">Adidas</label><br>
+        <input type="checkbox" id="brand-puma" value="Puma"> <label for="brand-puma">Puma</label>
+      </div>
+
+      <div class="filter-section" data-filter-group="sports">
+        <h4>Sports & Activities</h4>
+        <input type="checkbox" id="running" value="Running"> <label for="running">Running</label><br>
+        <input type="checkbox" id="training" value="Training"> <label for="training">Training</label><br>
+        <input type="checkbox" id="basketball" value="Basketball"> <label for="basketball">Basketball</label>
+      </div>
+
+      <div class="filter-section" data-filter-group="best-for">
+        <h4>Best For</h4>
+        <input type="checkbox" id="best-lifestyle" value="Lifestyle"> <label for="best-lifestyle">Lifestyle</label><br>
+        <input type="checkbox" id="best-sports" value="Sports"> <label for="best-sports">Sports</label><br>
+        <input type="checkbox" id="best-comfort" value="Comfort"> <label for="best-comfort">Comfort</label>
+      </div>
+    </aside>
+
+    <section class="products-grid">
+    </section>
+  </div>
+
+  <script>
+    // Fetch products and display them
+    fetch('https://dummyjson.com/products')
+      .then(res => res.json())
+      .then(data => {
+        displayProducts(data.products);
+      })
+      .catch(error => console.error('Error:', error));
+
+    function displayProducts(products) {
+      const productsGrid = document.querySelector('.products-grid');
+      productsGrid.innerHTML = ''; // Clear existing products
+      products.forEach(product => {
+        const productItem = document.createElement('div');
+        productItem.classList.add('product-item');
+        productItem.innerHTML = `
+          <img src="${product.thumbnail}" alt="${product.title}">
+          <p>${product.title}</p>
+          <p><span class="discount-price">$${(product.price * 0.85).toFixed(2)}</span> <del>$${product.price}</del></p>
+          <p>15% off</p>
+        `;
+        productsGrid.appendChild(productItem);
+      });
+    }
+
+    // Price range slider
+    const priceSlider = document.getElementById('price');
+    const priceValue = document.getElementById('price-value');
+    priceSlider.addEventListener('input', function() {
+      priceValue.textContent = `$${this.value}`;
+      fetch('https://dummyjson.com/products')
+        .then(res => res.json())
+        .then(data => {
+          const filteredProducts = data.products.filter(product => product.price <= this.value);
+          displayProducts(filteredProducts);
+        });
+    });
+
+    // Generalized function to ensure only one checkbox per category is checked
+    document.querySelectorAll('.filter-section').forEach(section => {
+      section.addEventListener('change', function(event) {
+        if (event.target.type === 'checkbox') {
+          const checkboxes = this.querySelectorAll('input[type="checkbox"]');
+          checkboxes.forEach(checkbox => {
+            if (checkbox !== event.target) {
+              checkbox.checked = false;
+            }
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find A Store</title>
+    <script src="https://kit.fontawesome.com/1e39886f7c.js" crossorigin="anonymous"></script>
+    <style>
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .container {
+            flex: 1;
+        }
+        .top-bar {
+            background-color: #f5f5f5;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: bold;
+            font-size: 13px;
+        }
+        .top-bar .left-icons img {
+            margin-right: 15px;
+            width: 20px;
+            cursor: pointer;
+        }
+        .top-bar .right-links a {
+            margin-left: 20px;
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+        }
+        .dropdown {
+            display: none;
+            position: absolute;
+            background-color: white;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 300px;
+            z-index: 1000;
+        }
+        .nav-item {
+            position: relative;
+        }
+        .dropdown a {
+            display: block;
+            padding: 10px;
+            color: black;
+            text-decoration: none;
+        }
+        .dropdown a:hover {
+            background-color: #f5f5f5;
+        }
+        .nav-item:hover .dropdown {
+            display: block;
+        }
+        .navbar {
+            position: relative;
+            background-color: white;
+            padding: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .navbar a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: black;
+            font-weight: bold;
+        }
+        .logo img {
+            height: 22px;
+            margin: 10px;
+            cursor: pointer;
+        }
+        .nav-links {
+            display: flex;
+            align-items: center;
+        }
+        .nav-icons img {
+            margin-left: 20px;
+            width: 20px;
+        }
+        #map {
+            height: 500px;
+            width: 60%;
+        }
+        .store-list {
+            width: 35%;
+            padding: 10px;
+        }
+        .store-item {
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        #search-box {
+            border-radius: 8px;
+            padding: 20px 40px;
+            border: 1px solid #000;
+            font-size: 17px;
+        }
+        .lists {
+            padding: 50px 0 0 50px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+        }
+        .column {
+            width: 20%;
+            padding: 50px 0 150px 0;
+        }
+        .column h3 {
+            font-size: 23px;
+            margin-bottom: 20px;
+        }
+        .column ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .column ul li {
+            font-weight: 500;
+            margin-bottom: 15px;
+            font-size: 17px;
+            transition: color 0.1s;
+            color: #575757;
+            cursor: pointer;
+        }
+        .column ul li:hover {
+            color: #0e0a0b;
+        }
+        .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            padding: 70px;
+        }
+        .footer-column {
+            width: 20%;
+        }
+        .footer-column h3 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .footer-column ul {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 30px;
+        }
+        .footer-column ul li {
+            margin-bottom: 14px;
+            font-size: 14px;
+            color: #8e8c8c;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .footer-column ul li:hover {
+            color: #1c1c1c;
+        }
+        .final {
+            color: #8e8c8c;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px 0 40px 0;
+        }
+        .final p:hover {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <div class="left-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike Logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Jordan Logo">
+            </div>
+            <div class="right-links">
+                <a href="#">Find a Store</a>
+                <a href="#">Help</a>
+                <a href="#">Join Us</a>
+                <a href="#">Sign In</a>
+            </div>
+        </div>
+        <header>
+            <div class="navbar">
+                <div class="logo">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg" alt="Nike Logo">
+                </div>
+                <nav class="nav-links">
+                    <div class="nav-item">
+                        <a href="#">New</a>
+                        <div class="dropdown">
+                            <a href="#">New Arrivals</a>
+                            <a href="#">Best Sellers</a>
+                            <a href="#">New Drops</a>
+                            <a href="#">SNKRS Calendar</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Men</a>
+                        <div class="dropdown">
+                            <a href="#">Shoes</a>
+                            <a href="#">Clothing</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Women</a>
+                        <div class="dropdown">
+                            <a href="#">Shoes</a>
+                            <a href="#">Clothing</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Kids</a>
+                        <div class="dropdown">
+                            <a href="#">Shoes</a>
+                            <a href="#">Clothing</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Jordan</a>
+                        <div class="dropdown">
+                            <a href="#">Jordan Shoes</a>
+                            <a href="#">Jordan Clothing</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a href="#">Sale</a>
+                        <div class="dropdown">
+                            <a href="#">Sale Shoes</a>
+                            <a href="#">Sale Clothing</a>
+                            <a href="#">Accessories</a>
+                        </div>
+                    </div>
+                </nav>
+                <div class="nav-icons">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <i class="fa-regular fa-heart"></i>
+                    <i class="fa-regular fa-cart-shopping"></i>
+                </div>
+            </div>
+        </header>
+        <div class="store-list">
+            <input type="text" id="search-box" placeholder="Search Location">
+            <div class="store-item">
+                <h4>Nike Store Baku Deniz Mall</h4>
+                <p>26a, Nafchilar Ave, Baku, Azerbaijan</p>
+                <p><strong>Open</strong> - Closes at 10:00 PM</p>
+            </div>
+            <div class="store-item">
+                <h4>Nike Store Tbilisi Rustaveli</h4>
+                <p>Tbilisi, Georgia</p>
+                <p><strong>Open</strong> - Closes at 10:00 PM</p>
+            </div>
+          <a href="https://www.nike.com/retail/directory">View All Stores</a>
+        </div>
+        <div id="map"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3040.2728020062955!2d49.83458227474757!3d40.35847505918479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40307d52ffc2e993%3A0xd2111009aadd4a9!2sNike!5e0!3m2!1saz!2saz!4v1726155554791!5m2!1saz!2saz" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+            <hr>
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li>Gift Cards</li>
+                        <li>Find a Store</li>
+                        <li>Membership</li>
+                        <li>Nike x NBA </li>
+                        <li>Nike Journal</li>
+                        <li>Site Feedback</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Help</h3>
+                    <ul>
+                        <li>Get Help</li>
+                        <li>Order Status</li>
+                        <li>Shipping and Delivery</li>
+                        <li>Returns</li>
+                        <li>Order Cancellation</li>
+                        <li>Payment Options</li>
+                        <li>Gift Card Balance</li>
+                        <li>Contact Us</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Company</h3>
+                    <ul>
+                        <li>About Nike</li>
+                        <li>News</li>
+                        <li>Careers</li>
+                        <li>Investors</li>
+                        <li>Purpose</li>
+                        <li>Sustainability</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Promotions & Discounts</h3>
+                    <ul>
+                        <li>Student</li>
+                        <li>Military</li>
+                        <li>Teacher</li>
+                        <li>First Responders</li>
+                        <li>Birthday</li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>United States      <i class="fa-solid fa-earth-americas"></i>  </h3>
+                </div>
+            </div>
+            <div class="final">
+               <p>© 2024 Nike, Inc. All Rights Reserved</p>
+        <p>Guides</p>
+        <p>Terms of Sale</p>
+        <p>Terms of Use</p>
+        <p>Nike Privarcy Policy</p>
+        <p><i class="fa-solid fa-house"></i>    Your Privarcy Choices</p>
+        <p>CA Supply Chains Act</p>
+            </div>
+        </div>
+    <script>
+ var map = L.map('map').setView([40.4093, 49.8671], 10);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        var stores = [
+            {name: "Nike Store Baku Deniz Mall", lat: 40.3725, lon: 49.8527},
+            {name: "Nike Store Tbilisi Rustaveli", lat: 41.7151, lon: 44.8271}
+        ];
+        stores.forEach(function(store) {
+            L.marker([store.lat, store.lon]).addTo(map)
+                .bindPopup(`<b>${store.name}</b>`)
+                .openPopup();
+        });
+    </script>
+</body>
+</html>
